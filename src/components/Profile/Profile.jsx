@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import defaultImage from 'img/defaultImage.jpg';
 
-export const Profile = ({ username , location, tag , avatar , stats }) => {
+export const Profile = ({ username , location, tag , avatar =  defaultImage, stats }) => {
 
   return (
     <div className="profile">
