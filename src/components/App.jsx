@@ -1,3 +1,5 @@
+// import styled from 'styled-components';
+// import { Box } from 'components/Box/Box';
 import { Profile } from "components/Profile/Profile";
 import { Statistics } from "components/Statistics/Statistics";
 import { FriendList } from "components/FriendList/FriendList";

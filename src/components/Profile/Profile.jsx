@@ -1,36 +1,46 @@
 import PropTypes from 'prop-types';
+import { Box } from 'components/Box/Box';
 import defaultImage from 'img/defaultImage.jpg';
+import { Card, Avatar, Name, Tag, Location, Stats, StatsItem, Label, Quantity } from 'components/Profile/Styled'
 
 export const Profile = ({ username , location, tag , avatar =  defaultImage, stats }) => {
 
   return (
-    <div className="profile">
-      <div className="description">
-        <img
-          src={avatar}
-          alt={username}
-          className="avatar"
-        />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <Box
+      py={6}
+      bg="backgroundPrimary">
+      <Card>
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          >
+          <Avatar
+            src={avatar}
+            alt={username}
+          />
+          <Name>{username}</Name>
+          <Tag>@{tag}</Tag>
+          <Location>{location}</Location>
+        </Box>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+        <Stats>
+          <StatsItem>
+            <Label>Followers</Label>
+            <Quantity>{stats.followers}</Quantity>
+          </StatsItem>
+          <StatsItem>
+            <Label>Views</Label>
+            <Quantity>{stats.views}</Quantity>
+          </StatsItem>
+          <StatsItem>
+            <Label>Likes</Label>
+            <Quantity>{stats.likes}</Quantity>
+          </StatsItem>
+        </Stats>
+      </Card>
+    </Box>
   );
 };
 
