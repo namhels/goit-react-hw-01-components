@@ -4,6 +4,7 @@ export const theme = {
     white: '#fff',
     textPrimary: '#2d3a4b',
     textSecondary: '#8d9aa7',
+    textStatistics: '#5d6266',
     backgroundPrimary: '#e7ecf2',
     backgroundSecondary: '#eff3f6',
     primary: '#07c',
@@ -14,7 +15,7 @@ export const theme = {
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
     body: 'system-ui, sans-serif',
-    heading: 'system-ui, sans-serif',
+    heading: 'Helvetica Neue, sans-serif',
     monospace: 'Menlo, monospace',
   },
   fontSizes: {
@@ -41,5 +42,10 @@ export const theme = {
     none: '0',
     normal: '4px',
     round: '50%',
+  },
+  shadows: {
+    small: '0px 3px 5px 1px rgba(0, 0, 0, 0.12)',
+    // medium: 8,
+    // large: 16,
   },
 };

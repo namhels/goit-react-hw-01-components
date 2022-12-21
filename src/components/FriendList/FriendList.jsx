@@ -1,20 +1,32 @@
 import PropTypes from 'prop-types';
+import { Box } from 'components/Box/Box';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import defaultImage from 'img/defaultImage.jpg';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
-      {friends.map(({ id, avatar = defaultImage, name, isOnline }) => (
-        <FriendListItem
-          key={id}
-          avatar={avatar}
-          name={name}
-          isOnline={isOnline}
-        />
-      ))}
+    <Box
+      py={6}
+      bg="backgroundPrimary">
+      <Box
+        as="ul"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        gridGap={3}
+        width={1 / 3}
+        mx='auto'>
+        {friends.map(({ id, avatar = defaultImage, name, isOnline }) => (
+          <FriendListItem
+            key={id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
+          />
+        ))}
+      </Box>
+    </Box>
 
-    </ul>
   );
 };
 
