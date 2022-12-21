@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Box } from 'components/Box/Box';
 import defaultImage from 'img/defaultImage.jpg';
-import { Card, Avatar, Name, Tag, Location, Stats, StatsItem, Label, Quantity } from 'components/Profile/Styled'
+import { Card, Avatar, Name, Tag, Location, Stats, StatsItem, Label, Quantity } from 'components/Profile/Profile.Styled'
 
 export const Profile = ({ username , location, tag , avatar =  defaultImage, stats }) => {
 

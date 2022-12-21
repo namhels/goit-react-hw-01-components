@@ -74,7 +74,6 @@ Statistics.propTypes = {
   ),
 };
 
-
     // <Box
     //   as="section"
     //   display="flex"
